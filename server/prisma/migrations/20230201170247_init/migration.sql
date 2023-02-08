@@ -1,0 +1,37 @@
+BEGIN TRY
+
+BEGIN TRAN;
+
+-- CreateTable
+CREATE TABLE [dbo].[User] (
+    [id] INT NOT NULL IDENTITY(1,1),
+    [email] NVARCHAR(1000) NOT NULL,
+    [password] NVARCHAR(1000) NOT NULL,
+    [username] NVARCHAR(1000) NOT NULL,
+    [role] NVARCHAR(1000) NOT NULL CONSTRAINT [User_role_df] DEFAULT 'USER',
+    CONSTRAINT [User_pkey] PRIMARY KEY CLUSTERED ([id]),
+    CONSTRAINT [User_email_key] UNIQUE NONCLUSTERED ([email])
+);
+
+-- CreateTable
+CREATE TABLE [dbo].[Sensor] (
+    [id] INT NOT NULL IDENTITY(1,1),
+    [idSensor] NVARCHAR(1000) NOT NULL,
+    [description] NVARCHAR(1000) NOT NULL,
+    [value] FLOAT(53) NOT NULL,
+    [lastUpdate] DATETIME2 NOT NULL,
+    CONSTRAINT [Sensor_pkey] PRIMARY KEY CLUSTERED ([id])
+);
+
+COMMIT TRAN;
+
+END TRY
+BEGIN CATCH
+
+IF @@TRANCOUNT > 0
+BEGIN
+    ROLLBACK TRAN;
+END;
+THROW
+
+END CATCH

@@ -1,0 +1,227 @@
+.monitoring {
+    margin: 10px;
+    margin-top: 0px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  td, th { 
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 3px 15px;
+    border: 1px solid #c4bfbf;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  th {
+    background-color: #cecaca;
+    border: 1px solid #777;
+    border-bottom: 2px solid #333;
+    color: #169;
+    padding: 5px 15px;
+
+  }
+  td {
+    color: #333;
+  }
+
+  .monitoring__filter {
+    margin: 5px 0px 10px;
+  }
+
+  .monitoring__filter .filter {
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+  }
+
+  .monitoring__filter .filter span {
+    height: 20px;
+    font-size: 16px;
+    color: white;
+    border: 1px solid #169;
+    padding: 12px;
+    background-color: #628DB6;
+    border-radius: 4px;
+  }
+
+  .form__filter {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+  .filter__group {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .filter__group label {
+    margin: 0px 4px;
+  }
+
+  .filter__group input {
+    padding: 5px;
+    margin-right: 4px;
+  }
+
+  .filter__label {
+    color: #777;
+    font-size: 15px;
+
+  }
+
+  .filter__group input {
+    border: 1px solid #999;
+    border-radius: 4px;
+  }
+
+  .filter__submit {
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .wp__filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .excel {
+    margin-right: 10px;
+    font-size: 15px;
+    background-color: #3d8559;
+    color: white;
+    padding: 10px;
+    border: 1px solid #444;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  @media all and (max-width: 1065px) {
+    .form__filter {
+      display: block;
+    }
+
+    .monitoring__filter .filter {
+      display: flex;
+      justify-content: space-around;
+      /* align-items: normal; */
+    }
+    /* .monitoring__filter .filter span {
+      height: 20px;
+    }
+    .filter__submit {
+      height: 30px;
+      margin: auto;
+    } */
+  }
+
+  .label__excel.show {
+    color: white;
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #333;
+    background-color: #3d8559;
+    padding: 20px;
+    border-radius: 6px;
+  }
+
+  .label__excel.disable {
+   display: none;
+  }
+
+  .excel__select {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+  }
+
+  .excel__select span {
+    display: block;
+  }
+
+  .excel__select span.first {
+    display: block;
+    font-size: 18px;
+  }
+
+  .excel__select span.last {
+    display: block;
+    font-size: 15px;
+    margin: 0px 0px 5px;
+    padding-left: 5px;
+    color: #e9cece;
+  }
+
+  .excel__select select {
+    width: max-content;
+  }
+
+  .nameFile {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+  }
+
+  .nameFile label {
+    padding: 5px 0px;
+  }
+
+  .nameFile span {
+    display: block;
+    font-size: 15px;
+    margin: 0px 0px 5px;
+    padding-left: 5px;
+    color: #e9cece;
+  }
+
+  .nameFile input {
+    padding: 3px;
+  }
+  .excel__export {
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #3d8559;
+    background-color: #c4bfbf;
+    width: max-content;
+    cursor: pointer;
+    border-radius: 3px;
+    color: black;
+  }
+
+  .over {
+    position: absolute;
+    width:100%;
+    height: calc(100vh - 86px);
+    background-color: #f8f3f3;
+    opacity: 0.3;
+  }
+  .excel__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(224, 128, 128);
+    font-size: 15px;
+    line-height: 17px;
+    width: 17px;
+    height: 17px;
+    border: 1px solid white;
+    border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
